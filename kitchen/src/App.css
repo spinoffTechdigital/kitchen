@@ -36,10 +36,7 @@
     transform: rotate(360deg);
   }
 }
-footer{
-  background-color: #181818;
-  color: white;
-}
+
 .Container{
   height: 100vh;
   background-color: #194657;
@@ -84,13 +81,18 @@ label{
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 5px;
+  color: black;
 }
+.co{
+  display: flex;
+  justify-content: center;
 
-
+}
 
 label {
   font-weight: bold;
 }
+
 
 input[type="text"],
 input[type="file"],
@@ -112,5 +114,21 @@ textarea {
 
 .submit-button:hover {
   background-color: #0056b3;
+}
+footer{
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+footer a{
+  padding: 15px;
+}
+.co ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.co ul li{
+  list-style: none;
+  padding: 15px;
 }
 
