@@ -5,11 +5,12 @@ import { Link } from "react-router-dom"; // Import the Link component
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <nav
+        className="navbar navbar-expand-lg bg-body-tertiary"
+        data-bs-theme="dark"
+      >
         <div className="container-fluid ">
-            <span className="cont">
-            My Blogs
-            </span>
+          <span className="cont">My Blogs</span>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,12 +25,12 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/home"> 
+                <Link className="nav-link" to="/home">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about"> 
+                <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
