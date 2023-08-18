@@ -36,10 +36,14 @@
     transform: rotate(360deg);
   }
 }
-
+.affix
+{
+    top: 0;
+}
 .Container{
-  height: 100vh;
- 
+  height: auto;
+ background-color: #16454d;
+ color: white;
 
 }
 .hcont{
@@ -58,7 +62,7 @@
   margin: 10px;
 }
 .cont{
-  
+  color: white;
   font-size: 20px;
   padding-right: 10px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -117,7 +121,7 @@ textarea {
 footer{
   background-color: black;
   color: white;
-  padding: 10px;
+
 }
 footer a{
   padding: 15px;
@@ -130,4 +134,14 @@ footer a{
   list-style: none;
   padding: 15px;
 }
-
+.cont-3 ul{
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: center;
+  grid-gap: 2rem;
+  
+  list-style: none;
+}
+.cont-3 ul li{
+  border: 1px solid white;
+}

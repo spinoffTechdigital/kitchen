@@ -6,16 +6,20 @@ const path = require("path");
 const app = express();
 const Blog = require("./models/dataSchema");
 const router = express.Router();
-const BodyParser=require("body-parser");
+const BodyParser = require("body-parser");
 app.use(express.json());
 app.use(BodyParser.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'public')));
+const dirname = path.resolve();
+app.use('/uploads', express.static(path.join(dirname, '/uploads')));
 
-mongoose.connect('mongodb+srv://anuragspinoff:anuragspinoff@blogs.cwctkfi.mongodb.net/blog?retryWrites=true&w=majority&ssl=true').
-  catch(error => handleError(error));
-const blog=mongoose.model('Blog');
+mongoose
+  .connect(
+    "mongodb+srv://anuragspinoff:anuragspinoff@blogs.cwctkfi.mongodb.net/blog?retryWrites=true&w=majority&ssl=true"
+  )
+  .catch((error) => handleError(error));
+const blog = mongoose.model("Blog");
 console.log(blog);
 // Configure multer for handling file uploads
 const storage = multer.diskStorage({
@@ -48,7 +52,7 @@ app.post("/insert", upload.single("image"), async (req, res) => {
 app.get("/getAllBlog", async (req, res) => {
   try {
     const allBlog = await Blog.find({}); // Fetch blogs, sorted by creation date
-    res.send({status: "ok",data: allBlog});
+    res.send({ status: "ok", data: allBlog });
   } catch (error) {
     console.error("Error fetching blogs:", error);
     res.status(500).json({ error: "An error occurred while fetching blogs." });
