@@ -39,8 +39,7 @@
 
 .Container{
   height: 100vh;
-  background-color: #194657;
-  color: white;
+ 
 
 }
 .hcont{
@@ -59,7 +58,7 @@
   margin: 10px;
 }
 .cont{
-  color: white;
+  
   font-size: 20px;
   padding-right: 10px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
