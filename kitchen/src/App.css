@@ -143,5 +143,17 @@ footer a{
   list-style: none;
 }
 .cont-3 ul li{
+    border-radius: 10px;
+    background-color: #1c1c1a;
+    padding: 15px;
+}
+#cat-img{
+  margin:10px;
+}
+.cat-button{
+  background-color: #1c1c1a;
   border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }

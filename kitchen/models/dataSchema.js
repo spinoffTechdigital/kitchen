@@ -1,18 +1,20 @@
 const mongoose = require("mongoose");
+
 const ReactFormDataSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    default: "",
   },
-  image: {
-    type: Buffer,
-    required: true,
-  },
+ image: {
+  type: String,
+  default: "",
+ },
   description: {
     type: String,
-    required: true,
+    default: "",
   },
 });
 
 const Blog = mongoose.model("Blog", ReactFormDataSchema);
 module.exports = Blog;
+

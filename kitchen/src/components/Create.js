@@ -13,7 +13,7 @@ function Create() {
     const formData = new FormData();
     formData.append("title", title);
     formData.append("description", description);
-    formData.append("image", image); 
+    formData.append("image", image);
 
     Axios.post("http://localhost:5000/insert", formData, {
       headers: {
@@ -51,7 +51,7 @@ function Create() {
             placeholder="put your blog image"
             id="imageInput"
             onChange={(e) => {
-              setImage(e.target.value);
+              setImage(e.target.files[0]); // Use e.target.files[0] instead of e.target.value
             }}
           />
         </div>

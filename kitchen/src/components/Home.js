@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Buffer } from 'buffer';
 function Home() {
   const navigate = useNavigate();
   const noteState = [];
@@ -42,19 +41,23 @@ function Home() {
         <ul>
           {blog.map((blogItem, index) => (
             <li key={index}>
-                {blogItem.image && (
-                <img
-                  width="300"
-                  height="300"
-                  src={`data:${blogItem.image.contentType};base64, ${Buffer.from(blogItem.image.data).toString('base64')}`}
-                  alt="img"
-                />
-              )}
+              
+                      <img
+                      id="cat-img"
+                      width="200px"
+                      height="200px"
+                      padding="10px"
+                      src={`http://localhost:5000/uploads/${blogItem.image}`}
+                      alt={blogItem.title}
+                    />
+              
               <h4>{blogItem.title}</h4>
               <p>{blogItem.description}</p>
+              <button className="cat-button">read More</button>
             </li>
           ))}
         </ul>
+        
       </div>
       .
     </div>
